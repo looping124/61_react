@@ -1,10 +1,10 @@
 import {Routes,Route} from 'react-router-dom'
 import Home from './components/Home/Home';
-import Services from './components/Services/Services';
+import Works from './components/Works/Works';
 import Profile from './components/Profile/Profile';
 import Navbar from './components/Navbar/Navbar';
-import Marketing from './components/Services/Marrketing/marketing';
-import Dev from './components/Services/Dev/Dev';
+import Marketing from './components/Works/Marrketing/marketing';
+import Dev from './components/Works/Dev/Dev';
 import Books from './components/Books/Books';
 import Book from './components/Books/Book';
 import React, { createContext,useState,useCallback } from 'react';
@@ -36,9 +36,9 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/services' element={<Services/>}>
-            <Route path='/services/marketing' element={<Marketing/>}/>
-            <Route path='/services/dev' element={<Dev/>}/>
+          <Route path='/works' element={<Works/>}>
+            <Route path='/works/marketing' element={<Marketing/>}/>
+            <Route path='/works/dev' element={<Dev/>}/>
           </Route>
           <Route path='/profile/:id' element={<Profile/>}/>
           <Route path='/books' element={<Books/>}></Route>

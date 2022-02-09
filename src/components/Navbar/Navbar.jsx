@@ -11,7 +11,7 @@ function Navbar() {
   return (
       <nav>
         <Link to="">Acceuil </Link>
-        <Link to="/services">Services</Link>
+        <Link to="/works">Works</Link>
         <Link to="/Books/">Books</Link>
         <input type="text" />
         <ThemedButton>Inscription</ThemedButton>
