@@ -8,6 +8,10 @@ import Dev from './components/Works/Dev/Dev';
 import Books from './components/Books/Books';
 import Book from './components/Books/Book';
 import React, { createContext,useState,useCallback } from 'react';
+import About from './components/About/About';
+import Platon from './components/Works/Platon/Platon';
+import Sedal from './components/Works/Sedal/Sedal';
+import Solane from './components/Works/Solane/Solane';
 
   const THEMES = {
     dark: {
@@ -33,19 +37,22 @@ function App() {
   return (
     <div className="App">
       <ThemeContext.Provider value={currentTheme}>
-        <Navbar/>
+        <Navbar toggleTheme={toggleTheme}/>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
           <Route path='/works' element={<Works/>}>
             <Route path='/works/marketing' element={<Marketing/>}/>
             <Route path='/works/dev' element={<Dev/>}/>
+            <Route path='/works/platon' element={<Platon/>}/>
+            <Route path='/works/solane' element={<Solane/>}/>
+            <Route path='/works/sedal' element={<Sedal/>}/>
           </Route>
           <Route path='/profile/:id' element={<Profile/>}/>
           <Route path='/books' element={<Books/>}></Route>
           <Route path='/books/:bookSlug' element={<Book test="test"/>}/>   
         </Routes>
       </ThemeContext.Provider>
-      <button onClick={toggleTheme}>Jour/nuit</button>
     </div>
   );
 }
